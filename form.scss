@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+:root{
+    --bgcolor: #8CB3EE;
+}
+
+@keyframes move{
+    0%{
+        left:0px;
+    }
+    100%{
+        left:50px;
+    }
+}
+
+body{
+    font-family: 'Tourney', cursive;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgcolor);
+    background-image: url(https://img.etimg.com/thumb/msid-74474287,width-650,imgsize-121613,,resizemode-4,quality-100/globally-more-than-3100-people-have-died-of-the-coronavirus-and-over-90000-have-been-infected-.jpg),linear-gradient(rgb(121, 121, 245), pink);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.steam_sign_up_form{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 35% 1fr 3rem;
+}
+
+.front{
+    order: 2;
+    background-color:darkorchid;
+    padding: 2rem;
+    box-shadow: 0 0 5px white;
+    grid-row: 2/5;
+}
+
+.back{
+    order: 1;
+    background-color:deepskyblue;
+    padding: 2rem;
+    box-shadow: 0 0 5px white;
+    grid-row: 3/4;
+}
+
+.title, .subheading{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.listUnstyled{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+    li{
+        margin-bottom: 1rem;
+    }
+}
+
+.form_label{
+    display:block;
+}
+
+.form_text{
+    all:unset;
+    background-color:fuchsia;
+    margin-bottom: 1rem;
+}
+
+.button{
+    all:unset;
+    display:block;
+    background-color: indigo;
+    padding: 6px;
+    box-shadow: 0 0 5px white;
+    border-radius: 4px;
+}
+
+.back::after{
+    content: "";
+    background-color:deepskyblue;
+    padding: 2rem;
+    box-shadow: 0 0 5px white;
+    display:block;
+    z-index:-1;
+    grid-column: -1/-2;
+    grid-row: 3/4;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top : 0;
+    right:0;
+}
+
+.tooltip{
+    display:inline-block;
+    background-color: rgb(203, 31, 255);
+    border-radius:50%;
+    text-align:center;
+    width:1rem;
+    position: relative;
+}
+
+.tooltip::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    width:200px;
+    top: -15px;
+    display:none;
+}
+
+.tooltip:hover::after{
+    display:block;
+}
+
+.strong{
+
+    position: relative;
+    width: 200px;
+    animation: move 2s infinite;
+}
+
+.button{
+    all:unset;
+    cursor:pointer;
+    display:block;
+    padding:10px;
+    background-color: darkseagreen;
+}
+
+.radio{
+    display:inline !important;
+}

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
+:root {
+  --bgcolor: #8CB3EE;
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+
+body {
+  font-family: 'Tourney', cursive;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bgcolor);
+  background-image: url(https://img.etimg.com/thumb/msid-74474287,width-650,imgsize-121613,,resizemode-4,quality-100/globally-more-than-3100-people-have-died-of-the-coronavirus-and-over-90000-have-been-infected-.jpg), -webkit-gradient(linear, left top, left bottom, from(#7979f5), to(pink));
+  background-image: url(https://img.etimg.com/thumb/msid-74474287,width-650,imgsize-121613,,resizemode-4,quality-100/globally-more-than-3100-people-have-died-of-the-coronavirus-and-over-90000-have-been-infected-.jpg), linear-gradient(#7979f5, pink);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.steam_sign_up_form {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+  -ms-grid-columns: 35% 1fr 3rem;
+      grid-template-columns: 35% 1fr 3rem;
+}
+
+.front {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background-color: darkorchid;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+}
+
+.back {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background-color: deepskyblue;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.title, .subheading {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.listUnstyled {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.listUnstyled li {
+  margin-bottom: 1rem;
+}
+
+.form_label {
+  display: block;
+}
+
+.form_text {
+  all: unset;
+  background-color: fuchsia;
+  margin-bottom: 1rem;
+}
+
+.button {
+  all: unset;
+  display: block;
+  background-color: indigo;
+  padding: 6px;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  border-radius: 4px;
+}
+
+.back::after {
+  content: "";
+  background-color: deepskyblue;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  display: block;
+  z-index: -1;
+  grid-column: -1/-2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
+.tooltip {
+  display: inline-block;
+  background-color: #cb1fff;
+  border-radius: 50%;
+  text-align: center;
+  width: 1rem;
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 200px;
+  top: -15px;
+  display: none;
+}
+
+.tooltip:hover::after {
+  display: block;
+}
+
+.strong {
+  position: relative;
+  width: 200px;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  background-color: darkseagreen;
+}
+
+.radio {
+  display: inline !important;
+}
+/*# sourceMappingURL=form.css.map */

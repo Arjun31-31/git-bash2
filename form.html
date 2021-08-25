@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="form.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="steam_sign_up_form">
+        <div class="front">
+            <h1 class="title">Get Vaccinated</h1>
+            <p>Keep distance <strong class="strong">2 meters</strong></p>
+            <form class="form">
+                <label for="name" class="form_label">Name <span class="tooltip" data-tooltip="Enter Your Name">?</span></label>
+                <input id="name" class="form_text" type="text">
+
+                <label for="pro" class="form_label">Profession</label>
+                <input id="pro" class="form_text" type="text">
+
+                <label for="email" class="form_label">E-mail</label>
+                <input id="email" class="form_text" type="text">
+                
+                <label for="dob" class="form_label">Date of Birth</label>
+                <input id="dob" class="form_text" type="date">
+
+                <label for="state" class="form_label">State</label>
+                <select name="state" id="state">
+                    <option class="form_text" value="Delhi">Delhi</option>
+                    <option class="form_text" value="mumbai">Mumbai</option>
+                </select>
+
+                <label class="form_label" for="foreignTravel">Have you travelled to any COVID-affected country(s) recently?</label>
+                <input value="Yes" name="travel" type="radio"><label class="form_label radio" for="">Yes</label>
+                <input value="No" name="travel" type="radio" checked="checked"><label class="form_label radio" for="">No</label>
+                
+                <label for="symptoms" class="form_label">Symptoms</label>
+                <input value="fever" name="symptoms" type="checkbox"><label class="form_label radio" for="">Fever</label>
+                <input value="cough" name="symptoms" type="checkbox"><label class="form_label radio" for="">Cough</label>
+
+                <input id="button" value="Click" type="submit" class="button">
+
+            </form>
+        </div>
+        <div class="back">
+            <h3 class="subheading">Physical distancing</h3>
+            <ul class="list listUnstyled">
+                <li>Maintain Distance</li>
+                <li>Avoid Crowding</li>
+                <li>Wash Hands</li>
+                <li>Follow instructions</li>
+                <li id="result"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script src="javascript/form.js"></script>
+</body>
+</html>
